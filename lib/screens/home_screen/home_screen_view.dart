@@ -167,18 +167,18 @@ class _HomeScreenViewState extends State<HomeScreenView> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 CircleAvatar(
-                                  radius: 80,
-                                  child: Image(
-                                    image: AssetImage(AppImages.userIcon),
-                                  ),
-                                ),
+                                    radius: 80,
+                                    child: Icon(
+                                      Icons.person_2_sharp,
+                                      size: 100,
+                                    )),
                               ],
                             ),
                             const SizedBox(
                               height: 15,
                             ),
                             const Text(
-                              'Aibek Kazbek',
+                              'Мубаракова Аружан',
                               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                             ),
                             const SizedBox(
@@ -202,17 +202,17 @@ class _HomeScreenViewState extends State<HomeScreenView> {
                                         style: TextStyle(fontSize: 17),
                                       ),
                                       Text(
-                                        'Пол: Оно',
+                                        'Пол: Она',
                                         style: TextStyle(fontSize: 17),
                                       ),
                                       Text(
-                                        'Рост: 191',
+                                        'Рост: 175',
                                         style: TextStyle(fontSize: 17),
                                       ),
-                                      Text(
-                                        'Вес: 110',
-                                        style: TextStyle(fontSize: 17),
-                                      ),
+                                      // Text(
+                                      //   'Вес: ',
+                                      //   style: TextStyle(fontSize: 17),
+                                      // ),
                                     ],
                                   ),
                                 ),

@@ -25,7 +25,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Create Account'),
+        title: const Text('Создать аккаунт'),
         centerTitle: true,
       ),
       body: Center(
@@ -36,7 +36,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               width: MediaQuery.of(context).size.width / 2,
               child: TextField(
                 controller: _emailController,
-                decoration: const InputDecoration(hintText: 'Email'),
+                decoration: const InputDecoration(hintText: 'Почта'),
               ),
             ),
             const SizedBox(
@@ -48,7 +48,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 controller: _passwordController,
                 obscureText: true,
                 decoration: const InputDecoration(
-                  hintText: 'Password',
+                  hintText: 'Пароль',
                 ),
               ),
             ),
@@ -70,7 +70,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   ),
                 );
               },
-              child: const Text('Create Account'),
+              child: const Text('Создать Аккаунт'),
             ),
           ],
         ),

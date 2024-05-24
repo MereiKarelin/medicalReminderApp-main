@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: const Text('Login'),
+        title: const Text('Войти'),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -57,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         controller: _emailController,
                         decoration: InputDecoration(
                           prefixIcon: Icon(Icons.email),
-                          hintText: 'Email',
+                          hintText: 'Почта',
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
                           ),
@@ -69,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         obscureText: true,
                         decoration: InputDecoration(
                           prefixIcon: Icon(Icons.lock),
-                          hintText: 'Password',
+                          hintText: 'Пароль',
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
                           ),
@@ -113,7 +113,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             ? const CircularProgressIndicator(
                                 valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
                               )
-                            : const Text('Login'),
+                            : const Text('Войти'),
                       ),
                     ],
                   ),
@@ -129,7 +129,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   );
                 },
                 child: const Text(
-                  'Create Account',
+                  'Нету аккаунта?',
                   style: TextStyle(
                     color: Colors.blueAccent,
                     fontWeight: FontWeight.bold,

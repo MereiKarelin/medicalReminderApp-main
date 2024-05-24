@@ -30,9 +30,7 @@ void main() async {
   await setupLocator();
   final bool isUserRegister = await AuthService().checkUserRegister();
 
-  runApp(MyApp(
-    isUserRegister: isUserRegister,
-  ));
+  runApp(MyApp(isUserRegister: isUserRegister));
 }
 
 class MyApp extends StatefulWidget {
