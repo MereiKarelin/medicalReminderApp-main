@@ -204,68 +204,6 @@ class AddMedicineView extends StatelessWidget {
                     text: const TextSpan(
                       children: [
                         TextSpan(
-                          text: "Продолжительность\n",
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: AppColors.lightBlack,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        TextSpan(
-                          text: 'Сколько дней нужно принимать таблетки?\n',
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: AppColors.grey,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.only(left: 4, right: 4, top: 1),
-                  child: TextField(
-                    controller: addMedicineController.durationDayController,
-                    decoration: InputDecoration(
-                      suffixIcon: IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.arrow_drop_down_rounded,
-                          size: 40,
-                          color: AppColors.grey,
-                        ),
-                      ),
-                      contentPadding: const EdgeInsets.all(10),
-                      hintText: '3 дня..',
-                      hintStyle: const TextStyle(color: AppColors.grey, fontSize: 20),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: const BorderSide(color: AppColors.grey),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: const BorderSide(color: AppColors.grey),
-                      ),
-                      errorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: const BorderSide(
-                          color: AppColors.grey,
-                        ),
-                      ),
-                      focusedErrorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: const BorderSide(color: AppColors.grey),
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.only(top: 25),
-                  child: RichText(
-                    textAlign: TextAlign.start,
-                    text: const TextSpan(
-                      children: [
-                        TextSpan(
                           text: "Время\n",
                           style: TextStyle(
                             fontSize: 16,

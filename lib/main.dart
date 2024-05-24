@@ -2,6 +2,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:health/screens/auth/auth_service.dart';
+import 'package:health/screens/auth/login/login_screen.dart';
+import 'package:health/screens/auth/registration/registration_screen.dart';
+import 'package:health/services/get_it.dart';
 import 'package:timezone/data/latest.dart' as tz;
 import 'screens/home_screen/home_screen_view.dart';
 import 'screens/add_medicine_screen/add_medicine_view.dart';
@@ -23,12 +27,17 @@ void main() async {
   FirebaseMessaging.onBackgroundMessage(backgroundHandler);
   LocalNotificationService.initialize();
   tz.initializeTimeZones();
+  await setupLocator();
+  final bool isUserRegister = await AuthService().checkUserRegister();
 
-  runApp(const MyApp());
+  runApp(MyApp(
+    isUserRegister: isUserRegister,
+  ));
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+  final bool isUserRegister;
+  const MyApp({super.key, required this.isUserRegister});
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -44,9 +53,11 @@ class _MyAppState extends State<MyApp> {
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.appOrange),
         useMaterial3: true,
       ),
-      initialRoute: HomeScreenView.routeName,
+      initialRoute: widget.isUserRegister ? HomeScreenView.routeName : LoginScreen.routeName,
       //home: HomeScreenView.builder(context),
       routes: {
+        LoginScreen.routeName: (context) => LoginScreen.builder(context),
+        RegistrationScreen.routeName: (context) => RegistrationScreen.builder(context),
         HomeScreenView.routeName: (context) => HomeScreenView.builder(context),
         AddMedicineView.routeName: (context) => AddMedicineView.builder(context),
         ScheduleView.routeName: (context) => ScheduleView.builder(context),

@@ -45,6 +45,9 @@ dependencies:
   firebase_analytics: ^10.4.3
   permission_handler: ^11.3.1
   timezone: ^0.9.3
+  firebase_auth: ^4.19.6
+  shared_preferences: ^2.2.3
+  get_it: ^7.7.0
 
 dev_dependencies:
   flutter_test:

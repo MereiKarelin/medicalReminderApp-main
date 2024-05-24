@@ -7,7 +7,7 @@ import 'package:health/services/local_notification.dart';
 
 class AddMedicineController extends GetxController {
   final pillNameController = TextEditingController();
-  final durationDayController = TextEditingController();
+  final durationDayController = '0';
   RxBool isTrue = false.obs;
   RxString selectedHour = '00'.obs;
   RxString selectedMinute = '00'.obs;
@@ -25,7 +25,7 @@ class AddMedicineController extends GetxController {
 
   void saveData() async {
     pillName = pillNameController.text;
-    durationDay = durationDayController.text;
+    durationDay = durationDayController;
     // print(pillName);
     // print(durationDay);
     // print(selectedHour);

@@ -5,7 +5,7 @@ import '../../add_medicine_screen/add_medicine_view.dart';
 import '../../../screens/schedule_screen/schedule_view.dart';
 
 class HomeController extends GetxController {
-  RxInt selectedIndex = 1.obs;
+  RxInt selectedIndex = 0.obs;
 
   RxList<Map<dynamic, dynamic>> serviceList = [
     // {'name': 'Consulting', 'imagePath': AppImages.consulting},
